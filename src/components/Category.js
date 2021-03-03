@@ -2,11 +2,16 @@ import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { getPhotoAction } from '../actions/index';
-import getPhoto from '../requests/getPhotos';
+// import getPhoto from '../requests/getPhotos';
 
 const Category = ({ name, url, updateUrl }) => {
   useEffect(() => {
-    const search = `${name} food`;
+    const obj = {
+      name,
+      url,
+    };
+    updateUrl(obj);
+    /* const search = `${name} food`;
     getPhoto(search).then(res => {
       try {
         console.log(res);
@@ -18,7 +23,7 @@ const Category = ({ name, url, updateUrl }) => {
       } catch (error) {
         console.log(error);
       }
-    });
+    }); */
   }, []);
 
   return (

@@ -1,28 +1,52 @@
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { useEffect } from 'react';
 import Category from '../components/Category';
+import getCategories from '../requests/getCategories';
+import { fetchCategoriesAction } from '../actions';
 
-const Categories = ({ categories }) => (
-  <div>
-    {/* Mapping to the list to display component */}
-    {categories.map(obj => (
-      <Category
-        key={obj.name}
-        name={obj.name}
-        url={obj.url}
-      />
-    ))}
-  </div>
-);
+const Categories = ({ fetch, categories }) => {
+  useEffect(() => {
+    const array = [];
+    getCategories().then(list => {
+      // console.log(list.meals.slice(0, 5));
 
-const mapStateToProps = state => ({
-  categories: state.categories,
-});
+      list.meals.slice(0, 3).map(m => {
+        array.push({ name: m.strArea, url: '' });
+        return true;
+      });
+      fetch(array);
+    });
+  }, []);
+
+  return (
+    <div>
+      {categories.map(obj => (
+        <Category
+          key={obj.name}
+          name={obj.name}
+          url={obj.url}
+        />
+      ))}
+    </div>
+  );
+};
 
 Categories.propTypes = {
   categories: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string,
   })).isRequired,
+  fetch: PropTypes.func.isRequired,
 };
 
-export default connect(mapStateToProps, null)(Categories);
+const mapStateToProps = state => ({
+  categories: state.categories,
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetch: categories => {
+    dispatch(fetchCategoriesAction(categories));
+  },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Categories);
