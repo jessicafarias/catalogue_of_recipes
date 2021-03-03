@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { getPhotoAction } from '../actions/index';
 // import getPhoto from '../requests/getPhotos';
+import '../styles/Category.css';
 
 const Category = ({ name, url, updateUrl }) => {
   useEffect(() => {
@@ -27,17 +29,19 @@ const Category = ({ name, url, updateUrl }) => {
   }, []);
 
   return (
-    <div>
-      <div>
-        <img src={url} alt={name} />
+    <Link className="regular" to={`/show/${name}`}>
+      <div className="relative_space">
+        <div>
+          <img src={url} alt={name} className="img_category" />
+        </div>
+        <div>
+          <div className="text_container">
+            <p className="text_category">{name}</p>
+            <p className="text_quantity">10 recipes</p>
+          </div>
+        </div>
       </div>
-      <div>
-        <p>
-          {name}
-          overlapping a little bit and transparent background
-        </p>
-      </div>
-    </div>
+    </Link>
   );
 };
 

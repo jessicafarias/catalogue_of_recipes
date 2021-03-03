@@ -4,15 +4,14 @@ import { useEffect } from 'react';
 import Category from '../components/Category';
 import getCategories from '../requests/getCategories';
 import { fetchCategoriesAction } from '../actions';
+import Navbar from '../components/Navbar';
 
 const Categories = ({ fetch, categories }) => {
   useEffect(() => {
     const array = [];
     getCategories().then(list => {
-      // console.log(list.meals.slice(0, 5));
-
-      list.meals.slice(0, 3).map(m => {
-        array.push({ name: m.strArea, url: '' });
+      list.meals.slice(0, 4).map(m => {
+        array.push({ name: m.strCategory, url: '' });
         return true;
       });
       fetch(array);
@@ -21,13 +20,15 @@ const Categories = ({ fetch, categories }) => {
 
   return (
     <div>
-      {categories.map(obj => (
-        <Category
-          key={obj.name}
-          name={obj.name}
-          url={obj.url}
-        />
-      ))}
+      <Navbar />
+      <div>
+        {categories.map(obj => (
+          <Category
+            key={obj.name}
+            name={obj.name}
+          />
+        ))}
+      </div>
     </div>
   );
 };

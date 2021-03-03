@@ -8,7 +8,7 @@ const updateurl = (state, category) => {
   return [...newState, objectUpdate];
 };
 
-const initialState = [{ name: 'American', url: null }];
+const initialState = [];
 const categoriesReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_CATEGORIES:
