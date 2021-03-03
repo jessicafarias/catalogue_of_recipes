@@ -1,0 +1,4 @@
+const FETCH_CATEGORIES = 'FETCH_CATEGORIES';
+export const GET_PHOTO = 'FETCH_CATEGORIES';
+
+export default FETCH_CATEGORIES;
