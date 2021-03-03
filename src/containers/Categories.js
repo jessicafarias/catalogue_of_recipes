@@ -7,8 +7,9 @@ const Categories = ({ categories }) => (
     {/* Mapping to the list to display component */}
     {categories.map(obj => (
       <Category
-        key={obj.strArea}
-        name={obj.strArea}
+        key={obj.name}
+        name={obj.name}
+        url={obj.url}
       />
     ))}
   </div>
@@ -20,7 +21,7 @@ const mapStateToProps = state => ({
 
 Categories.propTypes = {
   categories: PropTypes.arrayOf(PropTypes.shape({
-    strArea: PropTypes.string,
+    name: PropTypes.string,
   })).isRequired,
 };
 

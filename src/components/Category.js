@@ -1,48 +1,55 @@
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { getPhotoAction } from '../actions/index';
+import getPhoto from '../requests/getPhotos';
 
-const Category = ({ name }) => {
-  /* const [image, setImage] = useState(
-    {
-      src: 'initial set',
-    },
-  ); */
+const Category = ({ name, url, updateUrl }) => {
   useEffect(() => {
-    /*
-    const search = 'food'+name;
+    const search = `${name} food`;
     getPhoto(search).then(res => {
       try {
-        console.log(res.photos[0]);
-        console.log(res.photos[0].src);
-        console.log(res.photos[0].src.medium);
-        setImage(res.photos[0].src.medium);
-        console.log(image);
+        console.log(res);
+        const obj = {
+          name,
+          url: res.photos[0].src.medium,
+        };
+        updateUrl(obj);
       } catch (error) {
         console.log(error);
       }
     });
-    */
   }, []);
 
   return (
     <div>
       <div>
-        <p>Randome Image</p>
+        <img src={url} alt={name} />
       </div>
       <div>
         <p>
           {name}
-          overlapping a little bit and transparent backgorudn
+          overlapping a little bit and transparent background
         </p>
       </div>
     </div>
   );
 };
 
+const mapDispatchToProps = dispatch => ({
+  updateUrl: category => {
+    dispatch(getPhotoAction(category));
+  },
+});
+
 Category.propTypes = {
-  name: PropTypes.shape({
-    strArea: PropTypes.string,
-  }).isRequired,
+  name: PropTypes.string.isRequired,
+  url: PropTypes.string,
+  updateUrl: PropTypes.func.isRequired,
 };
 
-export default Category;
+Category.defaultProps = {
+  url: 'https://images.pexels.com/photos/923182/pexels-photo-923182.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+};
+
+export default connect(null, mapDispatchToProps)(Category);
