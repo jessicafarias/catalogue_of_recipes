@@ -3,20 +3,14 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getPhotoAction } from '../actions/index';
-// import getPhoto from '../requests/getPhotos';
+import getPhoto from '../requests/getPhotos';
 import '../styles/Category.css';
 
 const Category = ({ name, url, updateUrl }) => {
   useEffect(() => {
-    const obj = {
-      name,
-      url,
-    };
-    updateUrl(obj);
-    /* const search = `${name} food`;
+    const search = `${name} food`;
     getPhoto(search).then(res => {
       try {
-        console.log(res);
         const obj = {
           name,
           url: res.photos[0].src.medium,
@@ -25,7 +19,7 @@ const Category = ({ name, url, updateUrl }) => {
       } catch (error) {
         console.log(error);
       }
-    }); */
+    });
   }, []);
 
   return (

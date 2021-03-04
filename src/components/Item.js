@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import '../styles/slider.css';
 
 const Item = ({ url, title, order }) => {
   let stringclass = '';
@@ -6,9 +7,9 @@ const Item = ({ url, title, order }) => {
     stringclass = 'active';
   }
   return (
-    <div className={`carousel-item ${stringclass}`}>
-      <img src={url} className="d-block w-100" alt="2585" />
-      <h1>{title}</h1>
+    <div className={`carousel-item ${stringclass} relative_slide`}>
+      <img src={url} className="d-block w-100 img_slider" alt="2585" />
+      <h1 className="title_slider">{title}</h1>
       <h1>{order}</h1>
     </div>
   );

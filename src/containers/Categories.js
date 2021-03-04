@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 import Category from '../components/Category';
 import getCategories from '../requests/getCategories';
 import { fetchCategoriesAction } from '../actions';
-import Navbar from '../components/Navbar';
 
 const Categories = ({ fetch, categories }) => {
   useEffect(() => {
@@ -20,15 +19,13 @@ const Categories = ({ fetch, categories }) => {
 
   return (
     <div>
-      <Navbar />
-      <div>
-        {categories.map(obj => (
-          <Category
-            key={obj.name}
-            name={obj.name}
-          />
-        ))}
-      </div>
+      {categories.map(obj => (
+        <Category
+          key={obj.name}
+          name={obj.name}
+          url={obj.url}
+        />
+      ))}
     </div>
   );
 };
