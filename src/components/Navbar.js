@@ -1,5 +1,5 @@
 const Navbar = () => (
-  <div className="bgc-black">
+  <div className="bgc-black navbar">
     <div className="row justify-content-center align-items-center">
       <p className="col-3">
         <svg

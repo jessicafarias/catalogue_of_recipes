@@ -17,16 +17,7 @@ const Meals = ({ meals, fetch }) => {
 
   return (
     <div>
-      <div>
-        <p>
-          <Slider input={meals} />
-        </p>
-      </div>
-      <div>
-        <p>
-          receip mapping throw the api
-        </p>
-      </div>
+      <Slider input={meals} />
     </div>
   );
 };

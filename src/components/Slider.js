@@ -3,9 +3,9 @@ import Item from './Item';
 import ListItem from './listItem';
 
 const Slider = ({ input }) => (
-  <div className="max-200">
-    <div className=" slide">
-      <div id={`slide_in${input[0].idMeal}`} className="carousel slide center w-100 " data-ride="carousel" data-bs-interval="false">
+  <div className="index">
+    <div className="">
+      <div id={`slide_in${input[0].idMeal}`} className="carousel slide center w-100 " data-ride="carousel" data-bs-interval="false" data-interval="false">
         <ol className="carousel-indicators">
           {input.map((obj, index) => (
             <ListItem

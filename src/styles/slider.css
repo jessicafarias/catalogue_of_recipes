@@ -23,3 +23,7 @@
   z-index: 10000;
   color: white;
 }
+
+.index {
+  z-index: -1;
+}
