@@ -1,3 +1,5 @@
+import '../styles/navbar.css';
+
 const Navbar = () => (
   <div className="bgc-black navbar">
     <div className="row justify-content-center align-items-center">

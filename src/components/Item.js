@@ -1,18 +1,39 @@
 import PropTypes from 'prop-types';
-import '../styles/slider.css';
+import '../styles/slider.scss';
+import Style from 'style-it';
 
 const Item = ({ url, title, order }) => {
   let stringclass = '';
+
   if (order === 0) {
     stringclass = 'active';
   }
-  return (
-    <div className={`carousel-item ${stringclass} relative_slide`}>
-      <img src={url} className="d-block w-100 img_slider" alt="2585" />
-      <h1 className="title_slider">{title}</h1>
-      <h1>{order}</h1>
-    </div>
-  );
+  return Style.it(`
+  #uberuns:after {
+    content:'';
+    background: url("${url}");
+    background-attachment:fixed;
+    background-size:cover;
+  }`,
+    <div className={`carousel-item ${stringclass}`}>
+
+      <div className="image" style={{ backgroundImage: `url(${url})` }} />
+      <div className="section" id="uberuns" data={`url(${url})`}>
+        <p className="text_slider">
+          {title}
+        </p>
+        <p>
+          smnkalsdlaskdfnñsakldf
+          ddfnadskfjnaldfjnsa
+          asñldfljasdfljnasdf
+          sdfnakdfjñasdf
+          sfnsakdfasdf
+          kfjlas
+          ADKAJDFNAsfasdfkjsad
+          elfjbñsdfjk
+        </p>
+      </div>
+    </div>);
 };
 
 Item.propTypes = {

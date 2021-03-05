@@ -10,15 +10,11 @@ const Category = ({ name, url, updateUrl }) => {
   useEffect(() => {
     const search = `${name} food`;
     getPhoto(search).then(res => {
-      try {
-        const obj = {
-          name,
-          url: res.photos[0].src.medium,
-        };
-        updateUrl(obj);
-      } catch (error) {
-        console.log(error);
-      }
+      const obj = {
+        name,
+        url: res.photos[0].src.medium,
+      };
+      updateUrl(obj);
     });
   }, []);
 

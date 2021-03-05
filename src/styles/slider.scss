@@ -1,0 +1,54 @@
+.relative_container{
+  position: relative;
+}
+
+.text_slider{
+  width: 100%;
+  padding: 10px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: small;
+}
+.upercase {
+  text-transform: uppercase;
+}
+.span_title {
+  font-size: xx-small;
+  padding-top: 5px;
+}
+
+.index {
+  z-index: -1;
+}
+
+
+/* content */
+.image{
+  height:90vh;
+  width:100%;
+  background-attachment:fixed;
+  background-size:cover;
+}
+#spritzer{
+  background: transparent;
+  background-attachment:fixed;
+  background-size:cover;
+}
+#uberuns{
+  position: absolute;
+  top:90%;
+  height:100%;
+  width:100%;
+    background:rgba(0, 0, 0, 0.486);
+        position:relative;
+}
+
+#uberuns:after {
+  height:100%;
+  width:100%;
+  position:absolute;    
+  left:0;
+  top:0;
+  z-index:-1;
+}

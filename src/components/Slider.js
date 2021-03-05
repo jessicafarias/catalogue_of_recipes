@@ -9,8 +9,8 @@ const Slider = ({ input }) => (
         <ol className="carousel-indicators">
           {input.map((obj, index) => (
             <ListItem
-              key={obj.id}
-              id={input[0].idMeal}
+              key={obj.idMeal}
+              id={index}
               order={index}
             />
           ))}
@@ -18,7 +18,7 @@ const Slider = ({ input }) => (
         <div className="carousel-inner">
           {input.map((obj, index) => (
             <Item
-              key={obj.id}
+              key={obj.idMeal}
               url={obj.strMealThumb}
               title={obj.strMeal}
               order={index}
