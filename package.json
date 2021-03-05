@@ -1,6 +1,6 @@
 {
+  "homepage": "https://jessicafarias.me/catalogue_of_recipes/",
   "name": "catalogue_of_recipes",
-  "homepage": "http://jessicafarias.github.io/catalogue_of_recipes",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
