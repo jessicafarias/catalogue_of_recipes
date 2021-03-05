@@ -4,8 +4,7 @@ const initialState = [{
   idMeal: 1,
   strMealThumb: 'https://www.themealdb.com/images/media/meals/1529444830.jpg',
   strMeal: 'Title',
-  strIndredient1: 'Potatoes',
-  strIngredient2: 'strIngredient2',
+  strInstructions: 'Potatoes',
 }];
 const mealsReducer = (state = initialState, action) => {
   switch (action.type) {
