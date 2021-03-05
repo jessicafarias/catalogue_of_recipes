@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display CategoryFilter.js renders correctly 1`] = `
+<div
+  className="container_filter sticky-top"
+>
+  <label
+    htmlFor="w-100"
+  >
+    <select
+      className="select"
+      id="select"
+      name="category"
+      onChange={[Function]}
+    >
+      <option
+        disable="true"
+        hidden={true}
+      >
+        Search any keyword
+      </option>
+      <option
+        value="All"
+      >
+        All
+      </option>
+      <option
+        value="Beef"
+      >
+        Beef
+      </option>
+      <option
+        value="Breakfast"
+      >
+        Breakfast
+      </option>
+      <option
+        value="Chicken"
+      >
+        Chicken
+      </option>
+      <option
+        value="Dessert"
+      >
+        Dessert
+      </option>
+      <option
+        value="Goat"
+      >
+        Goat
+      </option>
+      <option
+        value="Lamb"
+      >
+        Lamb
+      </option>
+      <option
+        value="Miscellaneous"
+      >
+        Miscellaneous
+      </option>
+      <option
+        value="Pasta"
+      >
+        Pasta
+      </option>
+      <option
+        value="Pork"
+      >
+        Pork
+      </option>
+      <option
+        value="Seafood"
+      >
+        Seafood
+      </option>
+      <option
+        value="Side"
+      >
+        Side
+      </option>
+      <option
+        value="Starter"
+      >
+        Starter
+      </option>
+      <option
+        value="Vegan"
+      >
+        Vegan
+      </option>
+      <option
+        value="Vegetarian"
+      >
+        Vegetarian
+      </option>
+    </select>
+  </label>
+</div>
+`;
