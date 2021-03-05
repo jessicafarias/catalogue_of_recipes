@@ -8,7 +8,7 @@ import '../styles/Category.css';
 
 const Category = ({ name, url, updateUrl }) => {
   useEffect(() => {
-    const search = `${name} food`;
+    const search = `${name}`;
     getPhoto(search).then(res => {
       const obj = {
         name,

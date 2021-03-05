@@ -4,12 +4,15 @@ import { useEffect } from 'react';
 import Category from '../components/Category';
 import getCategories from '../requests/getCategories';
 import { changeFilterAction, fetchCategoriesAction } from '../actions';
+import CategoryFilter from '../components/CategoryFilter';
 
-const Categories = ({ fetch, categories, filtered }) => {
+const Categories = ({
+  fetch, categories, filtered, filter,
+}) => {
   useEffect(() => {
     const array = [];
     getCategories().then(list => {
-      list.meals.slice(0, 4).map(m => {
+      list.meals.map(m => {
         array.push({ name: m.strCategory, url: '' });
         return true;
       });
@@ -17,11 +20,16 @@ const Categories = ({ fetch, categories, filtered }) => {
     });
   }, []);
 
+  const handleFilterChange = category => {
+    filter(category);
+  };
+
   const filteredCategories = categories.filter(category => (
     !!((filtered === null || filtered === category.name))));
 
   return (
     <div className="Categories">
+      <CategoryFilter handleFilter={handleFilterChange} />
       {filteredCategories.map(obj => (
         <Category
           key={obj.name}
@@ -39,6 +47,7 @@ Categories.propTypes = {
   })).isRequired,
   fetch: PropTypes.func.isRequired,
   filtered: PropTypes.string,
+  filter: PropTypes.func.isRequired,
 };
 
 Categories.defaultProps = {
