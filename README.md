@@ -26,7 +26,7 @@ Catalogue of Recipes project.
 This is a real world standard calculator used for series of mathematical operations. It is designed with React, a JavaScript library for building user interfaces.
 
 ## Live Demo
-It's deployed [here](https://calculator-jess.herokuapp.com/) on heroku
+It's deployed [here](https://reverent-yonath-202d37.netlify.app) on netlify
 
 ### Built With
 This project was built using these technologies.
