@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/catalogue_of_recipes/static/css/main.52fc57f1.chunk.css",
+    "main.js": "/catalogue_of_recipes/static/js/main.25d2cad1.chunk.js",
+    "main.js.map": "/catalogue_of_recipes/static/js/main.25d2cad1.chunk.js.map",
+    "runtime-main.js": "/catalogue_of_recipes/static/js/runtime-main.0ea08b9d.js",
+    "runtime-main.js.map": "/catalogue_of_recipes/static/js/runtime-main.0ea08b9d.js.map",
+    "static/css/2.150d169a.chunk.css": "/catalogue_of_recipes/static/css/2.150d169a.chunk.css",
+    "static/js/2.02f22c5c.chunk.js": "/catalogue_of_recipes/static/js/2.02f22c5c.chunk.js",
+    "static/js/2.02f22c5c.chunk.js.map": "/catalogue_of_recipes/static/js/2.02f22c5c.chunk.js.map",
+    "index.html": "/catalogue_of_recipes/index.html",
+    "static/css/2.150d169a.chunk.css.map": "/catalogue_of_recipes/static/css/2.150d169a.chunk.css.map",
+    "static/css/main.52fc57f1.chunk.css.map": "/catalogue_of_recipes/static/css/main.52fc57f1.chunk.css.map",
+    "static/js/2.02f22c5c.chunk.js.LICENSE.txt": "/catalogue_of_recipes/static/js/2.02f22c5c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0ea08b9d.js",
+    "static/css/2.150d169a.chunk.css",
+    "static/js/2.02f22c5c.chunk.js",
+    "static/css/main.52fc57f1.chunk.css",
+    "static/js/main.25d2cad1.chunk.js"
+  ]
+}
