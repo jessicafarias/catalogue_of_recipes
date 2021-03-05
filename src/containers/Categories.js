@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import Category from '../components/Category';
 import getCategories from '../requests/getCategories';
-import { fetchCategoriesAction } from '../actions';
+import { changeFilterAction, fetchCategoriesAction } from '../actions';
 
-const Categories = ({ fetch, categories }) => {
+const Categories = ({ fetch, categories, filtered }) => {
   useEffect(() => {
     const array = [];
     getCategories().then(list => {
@@ -17,9 +17,12 @@ const Categories = ({ fetch, categories }) => {
     });
   }, []);
 
+  const filteredCategories = categories.filter(category => (
+    !!((filtered === null || filtered === category.name))));
+
   return (
-    <div>
-      {categories.map(obj => (
+    <div className="Categories">
+      {filteredCategories.map(obj => (
         <Category
           key={obj.name}
           name={obj.name}
@@ -35,15 +38,24 @@ Categories.propTypes = {
     name: PropTypes.string,
   })).isRequired,
   fetch: PropTypes.func.isRequired,
+  filtered: PropTypes.string,
+};
+
+Categories.defaultProps = {
+  filtered: null,
 };
 
 const mapStateToProps = state => ({
   categories: state.categories,
+  filtered: state.filter,
 });
 
 const mapDispatchToProps = dispatch => ({
   fetch: categories => {
     dispatch(fetchCategoriesAction(categories));
+  },
+  filter: category => {
+    dispatch(changeFilterAction(category));
   },
 });
 
