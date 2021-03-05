@@ -6,7 +6,11 @@ import CategoryFilter from '../CategoryFilter';
 
 describe('Display CategoryFilter.js', () => {
   it('renders correctly', () => {
-    const tree = TestRenderer.create(<BrowserRouter><CategoryFilter handleFilter={()=>{return true}} /></BrowserRouter>).toJSON();
+    const tree = TestRenderer.create(
+      <BrowserRouter>
+        <CategoryFilter handleFilter={() => true} />
+      </BrowserRouter>,
+    ).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
