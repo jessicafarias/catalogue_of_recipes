@@ -4,7 +4,6 @@ import thunk from 'redux-thunk';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { applyMiddleware, createStore } from 'redux';
-import App from './containers/App';
 import Categories from './containers/Categories';
 import rootReducer from './reducers/index';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -21,7 +20,7 @@ const Routes = () => (
     <BrowserRouter>
       <Switch>
         <Provider store={store}>
-          <Route exact path="/" component={App} />
+          <Route exact path="/" component={Categories} />
           <Route path="/show/:category" component={Meals} />
           <Route path="/home" component={Categories} />
         </Provider>

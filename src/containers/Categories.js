@@ -28,7 +28,7 @@ const Categories = ({
     !!((filtered === null || filtered === category.name))));
 
   return (
-    <div className="Categories">
+    <div className="Categories h-100">
       <CategoryFilter handleFilter={handleFilterChange} />
       {filteredCategories.map(obj => (
         <Category
@@ -37,6 +37,7 @@ const Categories = ({
           url={obj.url}
         />
       ))}
+      <img src="https://images.pexels.com/photos/1528013/pexels-photo-1528013.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="meal" />
     </div>
   );
 };

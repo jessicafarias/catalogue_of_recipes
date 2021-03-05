@@ -1,70 +1,125 @@
-# Getting Started with Create React App
+# catalogue_of_recipes
+Catalogue of Recipes project.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
 
-In the project directory, you can run:
+<!-- PROJECT LOGO -->
+  <h3 align="center">Catalogue of recipes</h3>
 
-### `npm start`
+  <p align="center">
+    This project it's a catalogue of recipes. So far the user can choose between diferent categories. when the user choose a category the Website redirect to a list of recipes related the the selected category. <br /></p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  <p align="center">
+    <img alt="Light" src="./public/goodvibes.png" width="30%">
+  &nbsp; &nbsp; &nbsp; &nbsp;
+    <img alt="Dark" src="./public/goodvibes2.png" width="30%">
+  </p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This is a real world standard calculator used for series of mathematical operations. It is designed with React, a JavaScript library for building user interfaces.
 
-### `npm run build`
+## Live Demo
+It's deployed [here](https://calculator-jess.herokuapp.com/) on heroku
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Built With
+This project was built using these technologies.
+* React
+* JavaScript
+* GitHub
+* Redux
+* Eslint
+* Stylelint
+* VScode
+* Jest
+* [Themealdb](https://www.themealdb.com/)
+* [Pexels](https://www.pexels.com/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Getting Started
 
-### `npm run eject`
+To get a local copy up and running follow these simple example steps.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Prerequisites
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ * [Node.js](https://nodejs.org/) is required to install dependencies and run scripts via npm.
+ * A modern browser
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Clone
+* Clone this repo:
+  - Clone with SSH:
+  ```
+    git@github.com:jessicafarias/catalogue_of_recipes.git
+  ```
+  - Clone with HTTPS
+  ```
+    https://github.com/jessicafarias/catalogue_of_recipes.git
+  ```
+  - Clone with GitHub CLI
+  ```
+    gh repo clone jessicafarias/catalogue_of_recipes
+    
+ - cd to catalogue_of_recipes
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### Setup
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Install dependencies:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+$ npm install
+```
 
-### Code Splitting
+Start the local webserver:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```$ npm start``` will open the project at local webserver at http://localhost:3000/ 
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Authors
 
-### Making a Progressive Web App
+## 👤 Jessica Michelle Farías Rosado:
+ [![Website](https://img.shields.io/badge/-Website-black?style=for-the-badge&logo=Julia&logoColor=white)](https://jessicafarias.github.io/)
+ [![LINKEDIN](https://img.shields.io/badge/-LINKEDIN-0077B5?style=for-the-badge&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/jessica-michelle-farias-rosado/)
+ [![EMAIL](https://img.shields.io/badge/-EMAIL-D14836?style=for-the-badge&logo=Mail.Ru&logoColor=white)](mailto:jessica.farias.rosado@gmail.com)
+ [![TWITTER](https://img.shields.io/badge/-TWITTER-1DA1F2?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/FariasRosado)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## 👤 Marc-Antoine Roy
+A special thanks is expressed to Marc Roy for the design.This is design will not use as a comercial purpose.
+[https://www.behance.net/gallery/11351281/NomNom](https://www.behance.net/gallery/11351281/NomNom)
+[Marc-Antoine Roy on Behance](https://www.behance.net/enfantroy)
+ 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Contributions, issues and feature requests are welcome!
 
-### `npm run build` fails to minify
+Feel free to check the [issues page](https://github.com/jessicafarias/catalogue_of_recipes/issues).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Show your support
+
+Give a :star: if you like this project!
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/jessicafarias/catalogue_of_recipes.svg?style=flat-square
+[contributors-url]: https://github.com/jessicafarias/catalogue_of_recipes/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/jessicafarias/catalogue_of_recipes.svg?style=flat-square
+[forks-url]: https://github.com/jessicafarias/catalogue_of_recipes/network/members
+[stars-shield]: https://img.shields.io/github/stars/jessicafarias/catalogue_of_recipes.svg?style=flat-square
+[stars-url]: https://github.com/jessicafarias/catalogue_of_recipes/stargazers
+[issues-shield]: https://img.shields.io/github/issues/jessicafarias/catalogue_of_recipes.svg?style=flat-square
+[issues-url]: https://github.com/jessicafarias/catalogue_of_recipes/issues
+
+## 📝 License
+
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.

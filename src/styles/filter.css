@@ -1,0 +1,22 @@
+.container_filter {
+  padding: 5px;
+  background-color: rgb(204, 204, 204);
+  font-family: 'PT Serif', serif;
+  font-size: small;
+  width: 100%;
+  margin: auto;
+}
+
+select {
+  width: 100%;
+  font-family: 'PT Serif', serif;
+  font-size: small;
+  padding: 5px;
+  text-align: start;
+  color: grey;
+}
+
+label {
+  width: 100%;
+  margin: auto;
+}

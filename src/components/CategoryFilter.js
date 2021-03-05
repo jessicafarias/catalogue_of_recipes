@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import '../styles/filter.css';
 
 const CategoryFilter = props => {
   const categories = ['All', 'Beef', 'Breakfast', 'Chicken', 'Dessert', 'Goat', 'Lamb',
@@ -15,19 +16,15 @@ const CategoryFilter = props => {
   };
 
   return (
-    <div>
-      <div>
-        <div>
-          <label htmlFor="select">
-            <select className="select" name="category" id="select" onChange={handleClick}>
-              <option disable="true" hidden>CATEGORIES</option>
-              {categories.map(
-                category => <option value={category} key={category}>{category}</option>,
-              )}
-            </select>
-          </label>
-        </div>
-      </div>
+    <div className="container_filter sticky-top">
+      <label htmlFor="w-100">
+        <select className="select" name="category" id="select" onChange={handleClick}>
+          <option disable="true" hidden>Search any keyword</option>
+          {categories.map(
+            category => <option value={category} key={category}>{category}</option>,
+          )}
+        </select>
+      </label>
     </div>
   );
 };
