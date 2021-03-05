@@ -5,7 +5,7 @@
 
 .img_category {
   position: absolute;
-  bottom:0;
+  bottom: 0;
   right: 0;
   object-fit: cover;
   object-position: center center;
@@ -16,7 +16,7 @@
 
 .text_container {
   position: absolute;
-  bottom:0;
+  bottom: 0;
   right: 0;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.63);
@@ -33,18 +33,15 @@
   text-transform: uppercase;
   font-size: small;
 }
+
 .text_quantity {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  font-size:x-small;
+  font-size: x-small;
 }
 
-.st0{fill:#FFDC84;}
+.st0 { fill: #ffdc84; }
 
-.Categories{
+.Categories {
   height: 100vh;
 }
-
-
-
-
