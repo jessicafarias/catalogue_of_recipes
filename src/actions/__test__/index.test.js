@@ -1,33 +1,52 @@
-import configureMockStore from 'redux-mock-store';
-import thunk from 'redux-thunk';
-import fetchMock from 'fetch-mock';
-import expect from 'expect';
 import * as actions from '../index';
-import * as types from '../../constants/ActionTypes';
+import * as types from '../types';
+ 
+  describe('actions', () => {
+    it('should create an action to fetch categories', () => {
+      const categories = [{
+        name: 'Breakfast',
+      }];
+      
+      const expectedAction = {
+        type: types.FETCH_CATEGORIES,
+        payload: categories,
+      }
+      expect(actions.fetchCategoriesAction(categories)).toEqual(expectedAction)
+    })
 
-const middlewares = [thunk];
-const mockStore = configureMockStore(middlewares);
+    it('should create an action to fetch photos with given category', () => {
+      const meals = [{
+        idMeal: 1,
+        strMealThumb: 'https://www.themealdb.com/images/media/meals/1529444830.jpg',
+        strMeal: 'Title',
+        strInstructions: 'Potatoes',
+      }];
+      const expectedAction = {
+        type: types.FETCH_MEALS,
+        payload: meals,
+      }
+      expect(actions.fetchMealsAction(meals)).toEqual(expectedAction)
+    })
+    it('should create an action to update photos url', () => {
+      const photos = {
+        name: 'Breakfast',
+        url: 'https://'
+      };
+      const expectedAction = {
+        type: types.GET_PHOTO,
+        name: photos.name,
+        url: photos.url,
+      }
+      expect(actions.getPhotoAction(photos)).toEqual(expectedAction)
+    })
 
-describe('async actions', () => {
-  afterEach(() => {
-    fetchMock.restore();
-  });
+    it('should create an action to update filter', () => {
+      const filter = 'Breakfast';
+      const expectedAction = {
+        type: types.CHANGE_FILTER,
+        filter: filter,
+      }
+      expect(actions.changeFilterAction(filter)).toEqual(expectedAction)
+    })
 
-  it('creates FETCH_TODOS_SUCCESS when fetching todos has been done', () => {
-    fetchMock.getOnce('/todos', {
-      body: { todos: ['do something'] },
-      headers: { 'content-type': 'application/json' },
-    });
-
-    const expectedActions = [
-      { type: types.FETCH_TODOS_REQUEST },
-      { type: types.FETCH_TODOS_SUCCESS, body: { todos: ['do something'] } },
-    ];
-    const store = mockStore({ todos: [] });
-
-    return store.dispatch(actions.fetchTodos()).then(() => {
-      // return of async actions
-      expect(store.getActions()).toEqual(expectedActions);
-    });
-  });
-});
+  })
