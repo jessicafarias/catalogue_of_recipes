@@ -41,10 +41,19 @@ const Slider = ({ input }) => (
 
 Slider.propTypes = {
   input: PropTypes.arrayOf(PropTypes.shape({
-    idMeal: PropTypes.string,
+    idMeal: PropTypes.number,
     strMealThumb: PropTypes.string,
     strMeal: PropTypes.string,
-  })).isRequired,
+  })),
+};
+
+Slider.defaultProps = {
+  input: [
+    {
+      idMeal: 1,
+      strMealThumb: 'https://images.pexels.com/photos/923182/pexels-photo-923182.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      strMeal: 'No found',
+    }],
 };
 
 export default Slider;

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display ItemList.js renders correctly 1`] = `
+<li
+  className="active"
+  data-slide-to={0}
+  data-target="#slide_in1"
+/>
+`;

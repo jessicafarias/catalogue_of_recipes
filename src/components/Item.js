@@ -53,4 +53,10 @@ Item.propTypes = {
   order: PropTypes.number.isRequired,
 };
 
+Item.defaultProps = {
+  url: 'https://images.pexels.com/photos/4193850/pexels-photo-4193850.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+  title: 'No found',
+  order: 0,
+};
+
 export default Item;

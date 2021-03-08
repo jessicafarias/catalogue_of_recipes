@@ -24,7 +24,7 @@ const Meals = ({ meals, fetch }) => {
 
 Meals.propTypes = {
   meals: PropTypes.arrayOf(PropTypes.shape({
-    idMeal: PropTypes.string,
+    idMeal: PropTypes.number,
     strMealThumb: PropTypes.string,
     strMeal: PropTypes.string,
   })).isRequired,
