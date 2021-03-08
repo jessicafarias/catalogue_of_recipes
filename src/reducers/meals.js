@@ -1,4 +1,4 @@
-import { FETCH_MEALS } from '../actions/index';
+import { FETCH_MEALS } from '../actions/types';
 
 const initialState = [{
   idMeal: 1,

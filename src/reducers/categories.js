@@ -1,4 +1,4 @@
-import { FETCH_CATEGORIES, GET_PHOTO } from '../actions/index';
+import { FETCH_CATEGORIES, GET_PHOTO } from '../actions/types';
 
 const updateurl = (state, category) => {
   const index = state.map(e => e.name).indexOf(category.name);

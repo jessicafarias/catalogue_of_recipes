@@ -1,4 +1,4 @@
-import { CHANGE_FILTER } from '../actions';
+import { CHANGE_FILTER } from '../actions/types';
 
 const filter = null;
 

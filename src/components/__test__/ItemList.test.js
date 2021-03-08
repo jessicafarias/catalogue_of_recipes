@@ -7,9 +7,10 @@ import ListItem from '../listItem';
 describe('Display ItemList.js', () => {
   it('renders correctly', () => {
     const tree = TestRenderer.create(
-    <BrowserRouter>
-      <ListItem id={1} order={0}/>
-    </BrowserRouter>).toJSON();
+      <BrowserRouter>
+        <ListItem id={1} order={0} />
+      </BrowserRouter>,
+    ).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

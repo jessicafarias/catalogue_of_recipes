@@ -1,25 +1,22 @@
-export const FETCH_CATEGORIES = 'FETCH_CATEGORIES';
-export const GET_PHOTO = 'GET_PHOTO';
-export const FETCH_MEALS = 'FETCH_MEALS';
-export const CHANGE_FILTER = 'CHANGE_FILTER';
+import * as types from './types';
 
 export const fetchCategoriesAction = categories => ({
-  type: FETCH_CATEGORIES,
+  type: types.FETCH_CATEGORIES,
   payload: categories,
 });
 
 export const getPhotoAction = category => ({
-  type: GET_PHOTO,
+  type: types.GET_PHOTO,
   name: category.name,
   url: category.url,
 });
 
 export const fetchMealsAction = meals => ({
-  type: FETCH_MEALS,
+  type: types.FETCH_MEALS,
   payload: meals,
 });
 
 export const changeFilterAction = category => ({
-  type: CHANGE_FILTER,
+  type: types.CHANGE_FILTER,
   filter: category,
 });
