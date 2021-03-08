@@ -9,13 +9,21 @@ import '../styles/Category.css';
 const Category = ({ name, url, updateUrl }) => {
   useEffect(() => {
     const search = `${name}`;
-    getPhoto(search).then(res => {
+    try {
+      getPhoto(search).then(res => {
+        const obj = {
+          name,
+          url: res.photos[0].src.medium,
+        };
+        updateUrl(obj);
+      });
+    } catch {
       const obj = {
         name,
-        url: res.photos[0].src.medium,
+        url: 'https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       };
       updateUrl(obj);
-    });
+    }
   }, []);
 
   return (

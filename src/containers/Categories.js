@@ -11,13 +11,17 @@ const Categories = ({
 }) => {
   useEffect(() => {
     const array = [];
-    getCategories().then(list => {
-      list.meals.map(m => {
-        array.push({ name: m.strCategory, url: '' });
-        return true;
+    try {
+      getCategories().then(list => {
+        list.meals.map(m => {
+          array.push({ name: m.strCategory, url: '' });
+          return true;
+        });
+        fetch(array);
       });
-      fetch(array);
-    });
+    } catch {
+      fetch([{ name: 'Breakfast', url: '' }, { name: 'Brunch', url: '' }]);
+    }
   }, []);
 
   const handleFilterChange = category => {

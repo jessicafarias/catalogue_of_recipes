@@ -10,9 +10,17 @@ const Meals = ({ meals, fetch }) => {
   const { category } = useParams();
 
   useEffect(() => {
-    getRecipes(category).then(res => {
-      fetch(res.meals);
-    });
+    try {
+      getRecipes(category).then(res => {
+        fetch(res.meals);
+      });
+    } catch {
+      fetch([{
+        idMeal: 1,
+        strMealThumb: 'https://images.pexels.com/photos/4439423/pexels-photo-4439423.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        strMeal: 'NOT FOUND',
+      }]);
+    }
   }, []);
 
   return (
