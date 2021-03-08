@@ -21,9 +21,6 @@ Catalogue of Recipes project.
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
-
-This is a real world standard calculator used for series of mathematical operations. It is designed with React, a JavaScript library for building user interfaces.
 
 ## Live Demo
 It's deployed [here](https://reverent-yonath-202d37.netlify.app) on netlify
@@ -91,10 +88,11 @@ Start the local webserver:
 
 
 ## 👤 Marc-Antoine Roy
-A special thanks is expressed to Marc Roy for the design.This is design will not use as a comercial purpose.
-[https://www.behance.net/gallery/11351281/NomNom](https://www.behance.net/gallery/11351281/NomNom)
-[Marc-Antoine Roy on Behance](https://www.behance.net/enfantroy)
- 
+A special thanks is expressed to Marc Roy for the design.
+This is design will not use as a comercial purpose.
+- [https://www.behance.net/gallery/11351281/NomNom](https://www.behance.net/gallery/11351281/NomNom)
+
+- [Marc-Antoine Roy on Behance](https://www.behance.net/enfantroy)
 
 
 ## 🤝 Contributing
