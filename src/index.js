@@ -24,7 +24,6 @@ const Routes = () => (
           <Route path="/show/:category" component={Meals} />
           <Route path="/home" component={Categories} />
         </Provider>
-        ,
       </Switch>
     </BrowserRouter>
   </>
